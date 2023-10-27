@@ -2,4 +2,8 @@ require 'confidante'
 
 configuration = Confidante.configuration
 
-print configuration.project
+desc "This is the default Rake task"
+task greet: [] do
+  puts "Hello: " + configuration.name
+end
+
