@@ -2,8 +2,8 @@ require 'confidante'
 
 configuration = Confidante.configuration
 
-desc "This is the default Rake task"
-task greet: [] do
+desc "Lookup greeting"
+task :greet, [:environment] do |task, args|
+  configuration = configuration.for_scope(args.to_h.merge(role: args[:environment]))
   puts "Hello: " + configuration.name
 end
-
