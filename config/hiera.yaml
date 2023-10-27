@@ -3,7 +3,7 @@
   - "overrides"
   - "env"
   - "yaml"
-:logger: "noop"
+:logger: "console" # noop
 :yaml:
   :datadir: "config"
 :hierarchy:
