@@ -2,8 +2,9 @@ require 'confidante'
 
 configuration = Confidante.configuration
 
-desc "Lookup greeting"
-task :greet, [:environment] do |task, args|
-  configuration = configuration.for_scope(args.to_h.merge(role: args[:environment]))
-  puts "Hello: " + configuration.name
+desc "Lookup database"
+task :database, [:deployment] do |task, args|
+  scope = ({:deployment => args[:deployment]})
+  configuration = configuration.for_scope(scope)
+  puts "DB Host: " + configuration.database_host
 end

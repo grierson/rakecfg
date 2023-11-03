@@ -7,5 +7,6 @@
 :yaml:
   :datadir: "config"
 :hierarchy:
-  - "roles/%{role}"
+  - "deployments/%{deployment}"
   - "defaults"
+  - "database"
