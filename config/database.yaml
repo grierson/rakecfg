@@ -1,2 +1,3 @@
 ---
-database_host: "%{hiera('database_host')}"
+vars:
+  database_host: "%{hiera('database_host')}"

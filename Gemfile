@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'confidante', '~> 0.28.0'
+gem 'confidante'
+gem 'rake_terraform'
